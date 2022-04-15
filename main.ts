@@ -130,8 +130,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite6, 
         boss1.vx = randint(-100, 100)
         boss1.setBounceOnWall(true)
         boss1.setFlag(SpriteFlag.StayInScreen, true)
-        tiles.setWallAt(tiles.getTileLocation(29, 15), true)
-        tiles.setWallAt(tiles.getTileLocation(29, 16), true)
+        tiles.setWallAt(tiles.getTileLocation(29, 25), true)
+        tiles.setWallAt(tiles.getTileLocation(29, 26), true)
         fieboll = 1
     }
 })
@@ -164,16 +164,16 @@ sprites.onOverlap(SpriteKind.attak, SpriteKind.superenemy, function (sprite13, o
         ENIMYliFe123 += -1
         if (ENIMYliFe123 <= 0) {
             boss1.destroy(effects.fire, 500)
-            tiles.setWallAt(tiles.getTileLocation(43, 11), false)
-            tiles.setWallAt(tiles.getTileLocation(44, 11), false)
-            tiles.setTileAt(tiles.getTileLocation(43, 11), assets.tile`myTile27`)
-            tiles.setTileAt(tiles.getTileLocation(44, 11), assets.tile`myTile27`)
-            tiles.setWallAt(tiles.getTileLocation(30, 0), false)
-            tiles.setWallAt(tiles.getTileLocation(30, 1), false)
-            tiles.setTileAt(tiles.getTileLocation(30, 0), assets.tile`myTile29`)
-            tiles.setTileAt(tiles.getTileLocation(30, 1), assets.tile`myTile29`)
-            tiles.setWallAt(tiles.getTileLocation(29, 15), false)
-            tiles.setWallAt(tiles.getTileLocation(29, 16), false)
+            tiles.setWallAt(tiles.getTileLocation(43, 21), false)
+            tiles.setWallAt(tiles.getTileLocation(44, 21), false)
+            tiles.setTileAt(tiles.getTileLocation(43, 21), assets.tile`myTile27`)
+            tiles.setTileAt(tiles.getTileLocation(44, 21), assets.tile`myTile27`)
+            tiles.setWallAt(tiles.getTileLocation(30, 10), false)
+            tiles.setWallAt(tiles.getTileLocation(30, 11), false)
+            tiles.setTileAt(tiles.getTileLocation(30, 10), assets.tile`myTile29`)
+            tiles.setTileAt(tiles.getTileLocation(30, 11), assets.tile`myTile29`)
+            tiles.setWallAt(tiles.getTileLocation(29, 25), false)
+            tiles.setWallAt(tiles.getTileLocation(29, 26), false)
             fieboll = 0
         }
         if (heals < 9) {
@@ -480,6 +480,7 @@ let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.power)
 tiles.placeOnRandomTile(mySprite, assets.tile`myTile30`)
+tiles.placeOnRandomTile(player1, assets.tile`myTile38`)
 forever(function () {
     if (player1.vx > 1) {
         sword.setImage(img`
